@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import Chat from './components/Chat/Chat';
-import Join from './components/Join/Join';
-import ChatHistory from './components/History/History';
-import ChatLog from './components/Log/Log';
-import Navigation from './components/Navigation/Nav';
+import Chat from './components/Chat';
+import Join from './components/Join';
+import ChatHistory from './components/History';
+import ChatLog from './components/Log';
+import Navigation from './components/Nav';
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 

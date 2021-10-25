@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Navigation = () => {
+const Navigation = ({name, room}) => {
 
-    return (  
+    return (
+
         <div className="mongo-links">
             <Link to='/history'>Chat History</Link>
             <Link to='/log'>Log History</Link>
-            <Link to='/chat'>Chat Room</Link>
         </div>
+
     );
 }
 

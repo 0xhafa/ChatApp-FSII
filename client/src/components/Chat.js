@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import queryString from 'query-string';
 import io from "socket.io-client";
 
-import SideBar from '../SideBar/SideBar';
-import Messages from '../Messages/Messages';
-import Header from '../Header/Header';
-import Input from '../Input/Input';
+import SideBar from './SideBar';
+import Messages from './Messages';
+import Header from './Header';
+import Input from './Input';
 
 
 const ENDPOINT = 'localhost:5000';

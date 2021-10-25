@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTable, useMemo } from "react-table";
+import Header from './Header';
 
 const Table = ({ columns, data }) => {
 
@@ -15,6 +16,8 @@ const Table = ({ columns, data }) => {
   });
 
   return (
+      <>
+    <Header />
     <table {...getTableProps()}>
       <thead>
         {headerGroups.map(headerGroup => (
@@ -38,6 +41,7 @@ const Table = ({ columns, data }) => {
         })}
       </tbody>
     </table>
+    </>
   );
 }
 

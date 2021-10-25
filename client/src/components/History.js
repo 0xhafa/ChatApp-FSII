@@ -1,18 +1,18 @@
 import React, { useMemo, useState, useEffect } from "react";
 import io from "socket.io-client";
-import Table from "../Table/Table";
+import Table from "./Table";
 
 let socket;
 const ENDPOINT = 'localhost:5000';
 
-const Log = () => {
+const History = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
         socket = io(ENDPOINT);
 
-        socket.emit('log');
-        socket.on('printLog', (document) => {
+        socket.emit('history');
+        socket.on('printHistory', (document) => {
             const historyData = JSON.stringify(document)
             setData(document)
         })
@@ -23,20 +23,20 @@ const Log = () => {
         () => [
           {
             // first group - TV Show
-            Header: "Log History",
+            Header: "Chat History",
             // First group columns
             columns: [
               {
-                Header: "Event Name",
-                accessor: "eventName"
+                Header: "Name",
+                accessor: "chatUsername"
               },
               {
-                Header: "Event Owner",
-                accessor: "eventOwner"
+                Header: "Room",
+                accessor: "chatRoom"
               },
               {
-                Header: "Description",
-                accessor: "eventDesc"
+                Header: "Message",
+                accessor: "chatMessage"
               },
               {
                 Header: "Datetime",
@@ -55,4 +55,4 @@ const Log = () => {
     ); 
 }
 
-export default Log;
+export default History;

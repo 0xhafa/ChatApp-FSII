@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 
-
 export default function SignIn() {
   const [name, setName] = useState('');
   const [room, setRoom] = useState('');
 
   return (
+    <div>
     <div className="join-container">
 			<header className="join-header">
 				<h1><i className="fab fa-bitcoin"></i> CryptoChat</h1>
@@ -20,7 +20,7 @@ export default function SignIn() {
 							name="username"
 							id="username"
 							placeholder="Enter username..."
-                            onChange={(event) => setName(event.target.value)}
+              onChange={(event) => setName(event.target.value)}
 							required
 						/>
 					</div>
@@ -42,5 +42,6 @@ export default function SignIn() {
         </form>
 			</main>
 		</div>
+    </div>
   );
 }
