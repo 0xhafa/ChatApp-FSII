@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+:root {
+	--dark-color-a: #f7931a;
+	--dark-color-b: #ffad48;
+    --white-color: #ffffff;
+	--light-color: 		#ebebeb;
+	--success-color: #5cb85c;
+	--error-color: #d9534f;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	background: var(--light-color);
+	margin: 20px;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+    margin-right: 20px;
+}
+
+.btn {
+	cursor: pointer;
+	padding: 5px 15px;
+	background: 	#0d579b;
+	color: var(--light-color);
+	border: 0;
+	font-size: 17px;
+}
+
+.mongo-links {
+    display: inline-block;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.select {
+    display: inline-flex;
+    height: 30px;
+}
+
+/* Chat Page */
+
+#leave-btn {
+    cursor: pointer;
+	padding: 5px 15px;
+	background: 	#e40606;
+	color: var(--light-color);
+	border: 0;
+	font-size: 17px;
+}
+
+.chat-container {
+	max-width: 90%;
+	background: #fff;
+	margin: 30px auto;
+	overflow: hidden;
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+
+.chat-header {
+	background: var(--dark-color-a);
+	color: #fff;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.chat-main {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+}
+
+.chat-sidebar {
+	background: var(--light-color);
+	color: 	#4d4d4d;
+	padding: 20px 20px 60px;
+	overflow-y: scroll;
+}
+
+.chat-sidebar h2 {
+	font-size: 20px;
+	background: rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.chat-sidebar h3 {
+    color: 	#4d4d4d;
+	margin-bottom: 15px;
+}
+
+.chat-sidebar ul li {
+    color: 	#4d4d4d;
+	padding: 10px 0;
+}
+
+.chat-messages {
+	padding: 30px;
+	height: 400px;
+	overflow-y: scroll;
+}
+
+.chat-messages .message {
+    font-size: 14px;
+	padding: 10px;
+	margin-bottom: 12px;
+	background-color: var(--light-color);
+	border-radius: 5px;
+	overflow-wrap: break-word;
+}
+
+.chat-messages .my-message {
+    font-size: 14px;
+	padding: 10px;
+	margin-bottom: 12px;
+	background-color: #bfdeec;
+	border-radius: 5px;
+	overflow-wrap: break-word;
+}
+
+.chat-messages .my-message .meta {
+	font-size: 10px;
+	font-weight: bold;
+	color: #4d4d4d;
+	opacity: 0.7;
+	margin-bottom: 4px;
+    text-align: right;
+    bottom: 0;
+    right: 0;
+}
+
+.chat-messages .message .meta {
+	font-size: 10px;
+	font-weight: bold;
+	color: var(--dark-color-b);
+	opacity: 0.7;
+	margin-bottom: 4px;
+    text-align: right;
+    bottom: 0;
+    right: 0;
+}
+
+.chat-messages .message .meta span {
+	color: #777;
+}
+
+.chat-form-container {
+	padding: 20px 30px;
+	background-color: var(--dark-color-a);
+}
+
+.chat-form-container form {
+	display: flex;
+}
+
+.chat-form-container input[type='text'] {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	flex: 1;
+}
+
+/* Join Page */
+.join-container {
+	max-width: 500px;
+	margin: 80px auto;
+	color: #fff;
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+
+.join-header {
+	text-align: center;
+	padding: 20px;
+	background: var(--dark-color-a);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.join-main {
+	padding: 30px 40px;
+	background: var(--white-color);
+}
+
+.join-main p {
+	margin-bottom: 20px;
+}
+
+.join-main .form-control {
+	margin-bottom: 20px;
+}
+
+.join-main label {
+    color: 	#4d4d4d;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.join-main input[type='text'] {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	width: 100%;
+}
+
+.join-main select {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	width: 100%;
+}
+
+.join-main .btn {
+	margin-top: 20px;
+	width: 100%;
+}
+
+@media (max-width: 700px) {
+	.chat-main {
+		display: block;
+	}
+
+	.chat-sidebar {
+		display: none;
+	}
+}
+
+
+/* History */
+
+.history-sidebar {
+	background: var(--light-color);
+	color: 	#4d4d4d;
+}
+
+/* Table */
+
+table {
+	margin-top: 20px;
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: 1px solid black;
+}
+ 
+	tr {
+	  padding: 0.5rem;
+	  border-bottom: 1px solid black;
+	  border-right: 1px solid black;
+	}
+ 
+	td {
+	  padding: 0.5rem;
+	  border-bottom: 1px solid black;
+	  border-right: 1px solid black;
+	}
+ 
+   
+	th {
+	  background:  #d9534f;
+	  border-bottom: 1px solid black;
+	  color: white;
+	}
+  
